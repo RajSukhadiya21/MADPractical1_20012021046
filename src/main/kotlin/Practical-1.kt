@@ -12,4 +12,10 @@ fun main()
     println("$b")
     var c=96.36
     println("$c")
+    var d=6424668464
+    println("$d")
+    var e:Short=-2
+    println("$e")
+    var f:Byte= 127
+    println("$f")
 }
