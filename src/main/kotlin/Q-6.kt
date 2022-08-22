@@ -1,23 +1,53 @@
-fun arithmetic(vararg nums:String){
-    var ans = 0
-    var mul = 1
-    when(nums[nums.size-1]){
-        "+" -> for (i in 0..nums.size -2){
-            ans =ans + nums[i].toInt()
+fun main (){
+    fun add(vararg x:Int){
+        var add:Int = x[0]
+        for(i in x[1]..x.size) {
+            add += i
         }
-        "-" -> for (i in 0..nums.size -2){
-            ans =ans - nums[i].toInt()
+        var y:String = ""
+        for(i in x){
+            y += "$i,"
         }
-        "*" -> for (i in 0..nums.size -2){
-            mul =mul * nums[i].toInt()
-        }
-        "/" -> for (i in 0..nums.size -2){
-            mul =mul / nums[i].toInt()
-        }
+        println("addition of $y is $add")
     }
-    println(ans)
-    println(mul)
-}
-fun main() {
-    arithmetic("2","7","4","*")
+
+    fun sub(vararg x:Int) {
+        var sub: Int = x[0]
+        for (i in x[1]..x.size){
+            sub -= i
+        }
+        var y:String = ""
+        for(i in x){
+            y += "$i,"
+        }
+        println("subtraction of $y is $sub")
+    }
+
+    fun mul(vararg x:Int){
+        var mul:Int = x[0]
+        for(i in x[1]..x.size) {
+            mul *= i
+        }
+        var y:String = ""
+        for(i in x){
+            y += "$i,"
+        }
+        println("multiplication of $y is $mul")
+    }
+
+    fun div(vararg x:Int){
+        var div:Int = x[0]
+        for(i in x[1]..x.size) {
+            div /= i
+        }
+        var y:String = ""
+        for(i in x){
+            y += "$i,"
+        }
+        println("divison of $y is $div")
+    }
+    add (1,2,3,4,5,6)
+    sub(30,1,4,5)
+    mul(5,2)
+    div(20,2)
 }
