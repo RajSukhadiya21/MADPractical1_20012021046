@@ -1,29 +1,63 @@
-fun main()
-{
-    var car1=Car("BMW","12",1000000,"Dhavanik",8000000)
-    println("${car1.getCarInformation()}")
-    println("${car1.getCurrentCarPrice()}")
-    println("${car1.getOriginalCarPrice()}")
-    println("${car1.displayCarInfo()}")
+class Car constructor(cmodel: String, oprice: Int, cowner: String, mdrive: Int, cprice: Int) {
+    var model: String
+    var originalPrice: Int
+    var owner: String
+    var mileDrive: Int
+    var currentPrice: Int
+
+    init {
+        this.model = cmodel
+        this.originalPrice = oprice
+        this.owner = cowner
+        this.mileDrive = mdrive
+        this.currentPrice = cprice
+        println("Object has been created and init called")
+        println("--------------------------------")
+        println("Car's Model : $model")
+        println("Car owner : $owner")
+        println("Miles Drive : $mileDrive")
+        println("Original Price : $originalPrice")
+        println("Current Price : $currentPrice")
+        println("--------------------------------\n")
+
+    }
+
+    fun getCarInformation() {
+        println("Car's Model : $model")
+    }
+
+    fun carOwner() {
+        println("Car owner : $owner")
+    }
+
+    fun mileDrove() {
+        println("Miles Drive : $mileDrive")
+    }
+
+    fun getOriginalCarPrice() {
+        println("Original Price : $originalPrice")
+    }
+
+    fun getCurrentCarPrice() {
+        println("Current Price : $currentPrice")
+    }
+
+    fun displayCarInfo() {
+        getCarInformation()
+        carOwner()
+        mileDrove()
+        getOriginalCarPrice()
+        getCurrentCarPrice()
+    }
+
+
 }
-class Car constructor(type:String, model:String, price:Long, owner:String, originalPrice:Long)
-{
-    var type:String=type
-    var model:String=model
-    var price:Long=price
-    var owner:String=owner
-    var originalPrice:Long=originalPrice
-    fun getCarInformation():String
-    {
-        return type
-    }
-    fun getOriginalCarPrice():Long{
-        return originalPrice
-    }
-    fun getCurrentCarPrice():Long{
-        return price
-    }
-    fun displayCarInfo():String{
-        return "$type\n$model\n$price\n$owner\n$originalPrice"
-    }
+
+fun main() {
+    println("Created car1 named object of class Car")
+    var car1 = Car("Mustang", 99999, "Me", 4990, 28500000)
+
+    println("Created car2 named object of class Car")
+    var car2 = Car("Challenger", 555555, "I", 400, 350000)
+
 }

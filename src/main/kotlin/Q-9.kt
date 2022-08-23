@@ -8,5 +8,5 @@ fun main() {
             maxNum=i
         }
     }
-    println("Max number is: $maxNum")
+    println("Largest  number is: $maxNum")
 }

@@ -1,19 +1,14 @@
 tailrec fun fact(a:Int):Long{
-    if(a<=1)
-    {
+    if(a<=1) {
         return 1
     }
-    else
-    {
+    else {
         return fact(a-1)*a
     }
 }
-
-fun main()
-{
+fun main() {
     println("Enter a number")
-    var n:Int= readLine()!!.toInt()
-    println("Factorial of given number :" )
+    var n: Int = readLine()!!.toInt()
+    println("Factorial of given number :")
     println(fact(n))
-
 }
